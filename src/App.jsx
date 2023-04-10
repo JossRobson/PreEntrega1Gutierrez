@@ -1,8 +1,7 @@
 import { useState } from 'react'
 
-
-import { Menu } from './Componentes/Menu/Menu'
-import { Titulo } from './Componentes/Titulo/Titulo'
+import { Navbar } from './Componentes/NavBar/NavBar'
+import {ItemListContainer} from './Componentes/ItemListContainer/ItemListContainer'
 
 //import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -23,7 +22,7 @@ function App() {
 
   const [counter, setCounter] = useState (0)
 
-  let style = {fontSize: 20, backgroundColor : 'Black' }
+  let style = {fontSize: 20, backgroundColor : 'white' }
 
   let handleCount = () => {
     setCounter(counter + 1)
@@ -42,14 +41,9 @@ function App() {
     <div className="App" style= {style}>
 
       
-      <Menu/> 
+      <Navbar/> 
       
-      <Titulo />
-      LOG IN
-      <Formulario />
-
-      <p>Clicks: {counter}</p>
-      <button onClick={handleCount}>Agregar al carrito</button>
+      <ItemListContainer greeting={'Bienvenidos a ReactEcommerce'}/>
       
       
 
@@ -60,3 +54,4 @@ function App() {
 }
      
 export default App
+
